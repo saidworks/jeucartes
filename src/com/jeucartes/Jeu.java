@@ -73,17 +73,19 @@ public class Jeu {
 					c2.setDamage(50);
 					System.out.println("Player 2's damage is : "+ c2.getDamage());
 					System.out.println("Player 1's damage is : "+ c1.getDamage());
+					System.out.println("it is a draw");
+					break;
 
 				}
 				else {
-					c1.setDamage(10);
-					c2.setDamage(10);
+					c1.setDamage(100);
+					c2.setDamage(100);
 					System.out.println("Player 2's damage is : "+ c2.getDamage());
 					System.out.println("Player 1's damage is : "+ c1.getDamage());
-					
-					
+					System.out.println("GAME OVER for both players");
+					break;
 				}
-				cardNb -= 2;
+				
 			}
 		}
 }
