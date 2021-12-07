@@ -55,17 +55,23 @@ public class Jeu {
 		}
 		
 		public static void joue(Terrain t1,Terrain t2,Creature c1,Creature c2,Sortilege s1,Sortilege s2) {
-			for(int i=0;i < cardNb;i++) {
+			System.out.println("On change de main");
+
+			int i=0;
+			while(i < cardNb) {
 				if( t1.getColor() == "vert" || t1.getColor() == "blanc") {
+			
 					c1.setDamage(100);
 					c2.setDamage(0);
-					System.out.println("Player 1 won used his " + s1.getName() + " "+ s1.getDescription());
+					cardNb -=2;
+					System.out.println("Player 1 won used his " + s1.getName() + " "+ s1.getDescription() + "he had " +t1.getColor() + " terrain" );
 					break;
 				}
 				else if(t2.getColor() == "rouge" || t2.getColor() == "noir"){
-					c1.setDamage(0);
-					c2.setDamage(100);
-					System.out.println("Player 2 won used his " + s2.getName()+ " " + s2.getDescription());
+					c1.setDamage(100);
+					c2.setDamage(0);
+					System.out.println("Player 2 won used his " + s2.getName()+ " " + s2.getDescription()+ "he had " +t1.getColor() + " terrain");
+					cardNb -=2;
 					break;
 				}
 				else if((t2.getColor() == "rouge" || t2.getColor() == "noir") && ( t1.getColor() == "vert" || t1.getColor() == "blanc")) {
@@ -74,6 +80,17 @@ public class Jeu {
 					System.out.println("Player 2's damage is : "+ c2.getDamage());
 					System.out.println("Player 1's damage is : "+ c1.getDamage());
 					System.out.println("it is a draw");
+					cardNb -=2;
+					break;
+
+				}
+				else if((t1.getColor() == "rouge" || t1.getColor() == "noir") && ( t2.getColor() == "vert" || t2.getColor() == "blanc")) {
+					c1.setDamage(100);
+					c2.setDamage(100);
+					System.out.println("Player 2's damage is : "+ c2.getDamage());
+					System.out.println("Player 1's damage is : "+ c1.getDamage());
+					System.out.println("it is a draw both creature are dead");
+					cardNb -=2;
 					break;
 
 				}
@@ -83,6 +100,7 @@ public class Jeu {
 					System.out.println("Player 2's damage is : "+ c2.getDamage());
 					System.out.println("Player 1's damage is : "+ c1.getDamage());
 					System.out.println("GAME OVER for both players");
+					cardNb -=2;
 					break;
 				}
 				
