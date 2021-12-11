@@ -12,4 +12,10 @@ public class Room {
         this.windows = windows;
         this.chairs = chairs;
     }
+    public void roomActions(){
+        tables.put();
+        doors.open();
+        windows.open();
+        chairs.sit();
+    }
 }

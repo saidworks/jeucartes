@@ -8,12 +8,16 @@ public class Chair extends Door{
     public Chair() {
     }
 
-    public Chair(ArrayList dimensions, int nbrs, String material) {
+    public Chair(int[] dimensions, int nbrs, String material) {
         super(dimensions, nbrs);
         this.material = material;
     }
 
     public String getMaterial() {
         return material;
+    }
+
+    public void sit(){
+        System.out.println("People sit here");
     }
 }
