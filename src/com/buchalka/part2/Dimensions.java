@@ -5,6 +5,9 @@ public class Dimensions {
     private int height;
     private int depth;
 
+    public Dimensions() {
+    }
+
     public Dimensions(int width, int height, int depth) {
         this.width = width;
         this.height = height;

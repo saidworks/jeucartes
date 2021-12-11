@@ -6,6 +6,9 @@ public class Case {
     private String powerSuplly;
     private Dimensions dimensions;
 
+    public Case() {
+    }
+
     public Case(String model, String manufacturer, String powerSuplly, Dimensions dimensions) {
         this.model = model;
         this.manufacturer = manufacturer;
