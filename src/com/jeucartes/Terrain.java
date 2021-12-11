@@ -3,6 +3,7 @@ import java.util.*;
 
 public class Terrain extends Carte{
 	private String color;
+	
 	private enum colors {
 		blanc,
 		bleu,
@@ -30,6 +31,10 @@ public class Terrain extends Carte{
 
 	public String getColor() {
 		return this.color;
+	}
+	
+	public void afficher() {
+		System.out.println("lsjfdhjnfkl");
 	}
 
 	

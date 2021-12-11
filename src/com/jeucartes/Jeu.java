@@ -56,7 +56,9 @@ public class Jeu {
 		
 		public static void joue(Terrain t1,Terrain t2,Creature c1,Creature c2,Sortilege s1,Sortilege s2) {
 			System.out.println("On change de main");
-
+			System.out.println("un nouveau Terrain");
+			System.out.println("une nouvelle créature");
+			System.out.println("On change de main");
 			int i=0;
 			while(i < cardNb) {
 				if( t1.getColor() == "vert" || t1.getColor() == "blanc") {
